@@ -1,0 +1,40 @@
+<title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ '/images/hero_2.jpg' | absolute_url }}{% endif %}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{ page.url | absolute_url }}">
+<meta property="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta property="twitter:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ '/images/hero_2.jpg' | absolute_url }}{% endif %}">
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,800,900|Source+Serif+Pro&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ '/fonts/icomoon/style.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/fonts/eticons/style.css' | relative_url }}">
+
+<link rel="stylesheet" href="{{ '/css/bootstrap.min.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/css/bootstrap-datepicker.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/css/jquery.fancybox.min.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/css/owl.carousel.min.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/css/owl.theme.default.min.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/css/aos.css' | relative_url }}">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+<link rel="shortcut icon" href="{{ '/images/favicon.png' | relative_url }}">
+
+{% include google-analytics.html %}
