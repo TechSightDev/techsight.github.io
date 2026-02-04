@@ -1,7 +1,7 @@
 title: TechSight
 email: info@techsight.dev
 description: >- # this means to ignore newlines until "baseurl:"
-  TechSight provides expert Fractional CTO and Technical Due Diligence services for B2B SaaS companies.
+  TechSight provides AI Readiness Assessments, RAG Chatbot Implementation, and SOC 2 Technical Readiness for B2B SaaS companies.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://techsight.dev" # the base hostname & protocol for your site
 
