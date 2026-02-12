@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Are You Ready for AI? Technical Due Diligence for Your Roadmap"
-date: 2026-02-05
+date: 2026-02-12
 image: /images/robot.jpg
 published: true
 ---
