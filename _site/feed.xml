@@ -1,1 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-02-04T12:48:51-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">TechSight</title><subtitle>TechSight provides AI Readiness Assessments, RAG Chatbot Implementation, and SOC 2 Technical Readiness for B2B SaaS companies.</subtitle></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-02-12T10:56:24-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">TechSight</title><subtitle>TechSight provides AI Readiness Assessments, RAG Chatbot Implementation, and SOC 2 Technical Readiness for B2B SaaS companies.</subtitle><entry><title type="html">Ship a Production-Ready RAG Chatbot in 2 Weeks</title><link href="http://localhost:4000/2026/02/11/rag-chatbot-quickstart.html" rel="alternate" type="text/html" title="Ship a Production-Ready RAG Chatbot in 2 Weeks" /><published>2026-02-11T00:00:00-05:00</published><updated>2026-02-11T00:00:00-05:00</updated><id>http://localhost:4000/2026/02/11/rag-chatbot-quickstart</id><content type="html" xml:base="http://localhost:4000/2026/02/11/rag-chatbot-quickstart.html"><![CDATA[<p><strong>Ship a production-ready RAG chatbot in 2 weeks—on your data, in your cloud.</strong></p>
+
+<p>No strategy decks. A working system you can demo, iterate on, and scale. We build once; you own it.</p>
+
+<h2 id="the-rag-chatbot-quickstart">The RAG Chatbot Quickstart</h2>
+
+<p>If you have internal knowledge you want searchable (docs, wiki, KB) or customer-facing support needs, but have delayed building an AI chatbot due to bandwidth or uncertainty, our Quickstart is the answer.</p>
+
+<h3 id="key-benefits">Key Benefits:</h3>
+
+<ol>
+  <li><strong>Fixed Scope, Fixed Timeline</strong>: We deliver in exactly 2 weeks. No scope creep.</li>
+  <li><strong>Production-Ready</strong>: This isn’t a throwaway POC. We include observability, cost controls, and re-ingestion runbooks.</li>
+  <li><strong>Your Infrastructure</strong>: We deploy to your AWS (or approved cloud). You own the Infrastructure as Code (IaC) and the codebase.</li>
+  <li><strong>Extendable</strong>: We provide a clear handoff so your team can add sources, tweak prompts, and scale the system themselves.</li>
+</ol>
+
+<h2 id="why-choose-us">Why Choose Us?</h2>
+
+<p>We understand that you need to show something real, not another slide deck. Our solution allows you to ship a product that is yours and actually runs in production.</p>
+
+<p>Get a working chatbot on your docs in 2 weeks.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Ship a production-ready RAG chatbot in 2 weeks—on your data, in your cloud.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/post_2.jpg" /><media:content medium="image" url="http://localhost:4000/images/post_2.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Are You Ready for AI? Technical Due Diligence for Your Roadmap</title><link href="http://localhost:4000/2026/02/05/ai-readiness-assessment.html" rel="alternate" type="text/html" title="Are You Ready for AI? Technical Due Diligence for Your Roadmap" /><published>2026-02-05T00:00:00-05:00</published><updated>2026-02-05T00:00:00-05:00</updated><id>http://localhost:4000/2026/02/05/ai-readiness-assessment</id><content type="html" xml:base="http://localhost:4000/2026/02/05/ai-readiness-assessment.html"><![CDATA[<p><strong>Technical due diligence for AI. Know if you’re ready to build—and where to start.</strong></p>
+
+<p>We assess your data, infrastructure, use cases, and cost structure. You get a prioritized roadmap and a clear “build vs. buy” view—before you pour budget into the wrong bet.</p>
+
+<h2 id="why-technical-ai-readiness">Why Technical AI Readiness?</h2>
+
+<p>Many organizations have “AI on the roadmap” but haven’t committed to a first use case, or have stalled after a Proof of Concept (POC). We provide a targeted, technical-first assessment that looks at:</p>
+
+<ol>
+  <li><strong>Data Pipelines &amp; Quality</strong>: Is your infrastructure fit for LLMs? We move beyond strategy fluff to technical reality.</li>
+  <li><strong>Use-Case Prioritization</strong>: We help you pick the first bet based on Impact × Feasibility × Data Readiness.</li>
+  <li><strong>Cost Modeling &amp; Guardrails</strong>: We model the real costs and ROI of POC vs 10x vs 100x scale. We look at tokens, embeddings, pipeline, and ops to provide a reality check before you scale.</li>
+  <li><strong>Build vs. Buy</strong>: We offer pragmatic advice on when to use managed services versus self-hosted models, and what to build versus integrate.</li>
+</ol>
+
+<h2 id="the-roi-of-experience-avoiding-the-rabbit-hole">The ROI of Experience: Avoiding the “Rabbit Hole”</h2>
+
+<p>The biggest risk in AI isn’t failing to build; it’s blowing through your budget on a project that never reaches production. Less experienced teams often fall into common traps that we help you navigate:</p>
+
+<ul>
+  <li><strong>Unconstrained Cost Spirals</strong>: Without proper token management and architectural guardrails, a successful POC can quickly become a financial liability at scale. We implement cost constraints early, ensuring your unit economics make sense before you commit.</li>
+  <li><strong>The Research Rabbit Hole</strong>: It’s easy to get lost in model tuning or chasing the latest academic benchmark. We focus on “Production-First AI”—getting a reliable, monitorable system into the hands of users rather than perfecting a model in a vacuum.</li>
+  <li><strong>Infrastructure Debt</strong>: Building AI without a clear data strategy often leads to “spaghetti pipelines” that are impossible to maintain. We ensure your foundation is built for the long term, not just for a demo.</li>
+</ul>
+
+<p>By investing in a 2-week Readiness Assessment, you’re not just buying a roadmap; you’re buying insurance against the millions of dollars lost to failed AI initiatives and misaligned technical bets. We bring the hard-won experience of seeing what actually works in production, so you don’t have to learn those lessons on your own dime.</p>
+
+<h2 id="who-is-this-for">Who Is This For?</h2>
+
+<p>This assessment is ideal for CEOs, CTOs, or Heads of Product at B2B SaaS or data-rich companies who want a clear “are we ready?” answer and a “what first?” roadmap in just 2 weeks.</p>
+
+<p>Stop guessing. Get a technical read on your data and infrastructure today. Email us at <a href="mailto:info@techsight.dev">info@techsight.dev</a> to schedule a consultation and see how we can help you build your AI roadmap with confidence.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Technical due diligence for AI. Know if you’re ready to build—and where to start.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/robot.jpg" /><media:content medium="image" url="http://localhost:4000/images/robot.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
