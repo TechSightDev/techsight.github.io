@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ship a Production-Ready RAG Chatbot in 2 Weeks"
-date: 2026-02-11
+date: 2026-02-19
 image: /images/post_2.jpg
 ---
 
