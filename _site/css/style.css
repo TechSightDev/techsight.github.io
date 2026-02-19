@@ -1079,6 +1079,14 @@ h1, h2, h3, h4, h5,
   font-weight: 900;
 }
 
+.service-detail-row .service-icon-lg span {
+  font-size: 5rem;
+  color: #d1d1d1;
+}
+.service-detail-row h5 {
+  font-size: 16px;
+}
+
 .media-29191 blockquote, .post-entry blockquote {
   font-size: 20px;
   font-family: "Poppins", sans-serif;

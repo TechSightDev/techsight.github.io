@@ -18,3 +18,4 @@ exclude:
   - README.md
   - archived
   - prepros-6.config
+  - content

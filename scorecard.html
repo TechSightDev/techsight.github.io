@@ -1,0 +1,515 @@
+---
+layout: default
+title: AI Readiness Scorecard
+description: Free self-assessment to evaluate your organization's AI readiness across data, infrastructure, use cases, cost modeling, and team preparedness.
+---
+
+<div class="site-section-cover">
+  <div class="container">
+    <div class="row align-items-center text-left justify-content-center">
+      <div class="col-lg-7 mr-auto">
+        <h1 class="text-black mb-4">AI Readiness Scorecard</h1>
+        <p class="lead text-muted">Rate your organization across 5 dimensions. Get your score and personalized recommendations in 3 minutes.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="site-section-cover" style="background-image: url('{{ '/images/hero_2.jpg' | relative_url }}');" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="row align-items-center text-left justify-content-center">
+    </div>
+  </div>
+</div>
+
+<style>
+  .scorecard-section { margin-bottom: 2.5rem; }
+  .scorecard-section h3 { margin-bottom: 1.5rem; }
+  .question-block { margin-bottom: 1.5rem; padding: 1.25rem; background: #fff; border: 1px solid #e9ecef; border-radius: 6px; }
+  .question-block p { font-weight: 600; margin-bottom: 0.75rem; }
+  .question-block .btn-group-toggle { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .question-block .btn-group-toggle .btn { flex: 1 1 auto; min-width: 120px; border: 1px solid #dee2e6; background: #fff; color: #495057; font-size: 0.85rem; padding: 0.5rem 0.75rem; border-radius: 4px; cursor: pointer; transition: all 0.2s; text-align: center; }
+  .question-block .btn-group-toggle .btn:hover { border-color: #2d5be3; color: #2d5be3; }
+  .question-block .btn-group-toggle .btn.active { background: #2d5be3; border-color: #2d5be3; color: #fff; }
+  .question-block .btn-group-toggle input[type="radio"] { display: none; }
+
+  #scorecard-results { display: none; }
+  .score-circle { width: 180px; height: 180px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; border: 8px solid #dee2e6; }
+  .score-circle .score-value { font-size: 3rem; font-weight: 700; }
+  .score-circle .score-label { font-size: 0.85rem; color: #6c757d; }
+  .score-circle.tier-foundation { border-color: #dc3545; }
+  .score-circle.tier-planning { border-color: #fd7e14; }
+  .score-circle.tier-ready { border-color: #2d5be3; }
+  .score-circle.tier-execution { border-color: #28a745; }
+
+  .progress-bar-scorecard { height: 12px; border-radius: 6px; background: #e9ecef; overflow: hidden; margin-bottom: 2rem; }
+  .progress-bar-scorecard .fill { height: 100%; border-radius: 6px; width: 0; transition: width 1.5s ease; }
+  .fill.tier-foundation { background: #dc3545; }
+  .fill.tier-planning { background: #fd7e14; }
+  .fill.tier-ready { background: #2d5be3; }
+  .fill.tier-execution { background: #28a745; }
+
+  .dimension-card { background: #fff; border: 1px solid #e9ecef; border-radius: 6px; padding: 1.25rem; margin-bottom: 1rem; }
+  .dimension-card h5 { margin-bottom: 0.5rem; }
+  .dimension-card .dim-bar { height: 8px; border-radius: 4px; background: #e9ecef; overflow: hidden; margin-top: 0.5rem; }
+  .dimension-card .dim-bar .dim-fill { height: 100%; border-radius: 4px; width: 0; transition: width 1.2s ease; }
+
+  .tier-badge { display: inline-block; padding: 0.35rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.9rem; color: #fff; margin-bottom: 1rem; }
+  .tier-badge.tier-foundation { background: #dc3545; }
+  .tier-badge.tier-planning { background: #fd7e14; }
+  .tier-badge.tier-ready { background: #2d5be3; }
+  .tier-badge.tier-execution { background: #28a745; }
+
+  .recommendation-box { background: #f8f9fa; border-left: 4px solid #2d5be3; padding: 1.25rem 1.5rem; border-radius: 0 6px 6px 0; margin-bottom: 2rem; }
+  .recommendation-box h4 { margin-bottom: 0.75rem; }
+  .recommendation-box ul { margin-bottom: 0; }
+  .recommendation-box ul li { margin-bottom: 0.4rem; }
+
+  #submit-scorecard { font-size: 1.1rem; padding: 0.75rem 2.5rem; }
+  .unanswered { border-color: #dc3545 !important; box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25); }
+</style>
+
+<div class="site-section" id="scorecard-form-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <!-- Dimension 1: Data Readiness -->
+        <div class="scorecard-section" data-aos="fade-up">
+          <h3>1. Data Readiness</h3>
+
+          <div class="question-block" data-question="q1">
+            <p>How would you describe the state of your core data pipelines?</p>
+            <div class="btn-group-toggle">
+              <label class="btn"><input type="radio" name="q1" value="0"> No pipelines — data lives in spreadsheets or siloed databases</label>
+              <label class="btn"><input type="radio" name="q1" value="1"> Basic ETL exists but is fragile or manually triggered</label>
+              <label class="btn"><input type="radio" name="q1" value="2"> Reliable pipelines with some monitoring and error handling</label>
+              <label class="btn"><input type="radio" name="q1" value="3"> Robust, automated pipelines with quality checks and alerting</label>
+            </div>
+          </div>
+
+          <div class="question-block" data-question="q2">
+            <p>How clean and consistent is the data you'd use for AI features?</p>
+            <div class="btn-group-toggle">
+              <label class="btn"><input type="radio" name="q2" value="0"> Significant quality issues — duplicates, missing fields, no standards</label>
+              <label class="btn"><input type="radio" name="q2" value="1"> Known issues exist but we haven't prioritized cleanup</label>
+              <label class="btn"><input type="radio" name="q2" value="2"> Mostly clean with documented schemas and some validation</label>
+              <label class="btn"><input type="radio" name="q2" value="3"> High quality with automated validation, governance, and lineage tracking</label>
+            </div>
+          </div>
+
+          <div class="question-block" data-question="q3">
+            <p>Do you have enough relevant data to train or ground AI models?</p>
+            <div class="btn-group-toggle">
+              <label class="btn"><input type="radio" name="q3" value="0"> Very little relevant data — we'd need to start collecting</label>
+              <label class="btn"><input type="radio" name="q3" value="1"> Some data exists but coverage is spotty or format is inconsistent</label>
+              <label class="btn"><input type="radio" name="q3" value="2"> Good volume of relevant data, accessible in a queryable format</label>
+              <label class="btn"><input type="radio" name="q3" value="3"> Rich, labeled datasets with clear domain coverage and easy access</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dimension 2: Infrastructure & Architecture -->
+        <div class="scorecard-section" data-aos="fade-up">
+          <h3>2. Infrastructure &amp; Architecture</h3>
+
+          <div class="question-block" data-question="q4">
+            <p>How would you describe your cloud infrastructure and deployment capabilities?</p>
+            <div class="btn-group-toggle">
+              <label class="btn"><input type="radio" name="q4" value="0"> Mostly on-prem or manual deployments, no cloud-native tooling</label>
+              <label class="btn"><input type="radio" name="q4" value="1"> Some cloud services but deployments are ad hoc</label>
+              <label class="btn"><input type="radio" name="q4" value="2"> Cloud-native with CI/CD, containerization, and basic IaC</label>
+              <label class="btn"><input type="radio" name="q4" value="3"> Mature cloud platform with IaC, auto-scaling, observability, and GitOps</label>
+            </div>
+          </div>
+
+          <div class="question-block" data-question="q5">
+            <p>Can your current architecture support async processing and API integrations needed for AI?</p>
+            <div class="btn-group-toggle">
+              <label class="btn"><input type="radio" name="q5" value="0"> Monolithic architecture — adding async or external APIs would be a major effort</label>
+              <label class="btn"><input type="radio" name="q5" value="1"> Some service boundaries exist but integrating new APIs is slow</label>
+              <label class="btn"><input type="radio" name="q5" value="2"> Service-oriented architecture with queues and standard API patterns</label>
+              <label class="btn"><input type="radio" name="q5" value="3"> Microservices or modular monolith with event-driven patterns and API gateway</label>
+            </div>
+          </div>
+
+          <div class="question-block" data-question="q6">
+            <p>How mature is your monitoring and observability stack?</p>
+            <div class="btn-group-toggle">
+              <label class="btn"><input type="radio" name="q6" value="0"> Minimal — we rely on user reports to find issues</label>
+              <label class="btn"><input type="radio" name="q6" value="1"> Basic logging and uptime monitoring</label>
+              <label class="btn"><input type="radio" name="q6" value="2"> Centralized logging, metrics dashboards, and alerting</label>
+              <label class="btn"><input type="radio" name="q6" value="3"> Full observability — traces, metrics, logs, SLOs, and anomaly detection</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dimension 3: Use-Case Clarity -->
+        <div class="scorecard-section" data-aos="fade-up">
+          <h3>3. Use-Case Clarity</h3>
+
+          <div class="question-block" data-question="q7">
+            <p>How well-defined is your first (or next) AI use case?</p>
+            <div class="btn-group-toggle">
+              <label class="btn"><input type="radio" name="q7" value="0"> We know we want "AI" but haven't identified a specific use case</label>
+              <label class="btn"><input type="radio" name="q7" value="1"> We have a few ideas but haven't prioritized or scoped them</label>
+              <label class="btn"><input type="radio" name="q7" value="2"> One use case is identified with clear user value and success metrics</label>
+              <label class="btn"><input type="radio" name="q7" value="3"> Prioritized backlog of use cases ranked by impact, feasibility, and data readiness</label>
+            </div>
+          </div>
+
+          <div class="question-block" data-question="q8">
+            <p>Have you mapped the end-to-end user workflow for your AI feature?</p>
+            <div class="btn-group-toggle">
+              <label class="btn"><input type="radio" name="q8" value="0"> No — we're thinking about the AI model, not the user experience</label>
+              <label class="btn"><input type="radio" name="q8" value="1"> Rough idea of where AI fits but no detailed workflow mapping</label>
+              <label class="btn"><input type="radio" name="q8" value="2"> Documented user flow with AI touchpoints and fallback behaviors</label>
+              <label class="btn"><input type="radio" name="q8" value="3"> Full UX spec including edge cases, error states, and human-in-the-loop escalation</label>
+            </div>
+          </div>
+
+          <div class="question-block" data-question="q9">
+            <p>Do you understand the build vs. buy trade-offs for your use case?</p>
+            <div class="btn-group-toggle">
+              <label class="btn"><input type="radio" name="q9" value="0"> Haven't considered it — assumed we'd build everything custom</label>
+              <label class="btn"><input type="radio" name="q9" value="1"> Aware of some vendors but haven't done a structured comparison</label>
+              <label class="btn"><input type="radio" name="q9" value="2"> Evaluated key vendors and have a preliminary build vs. buy view</label>
+              <label class="btn"><input type="radio" name="q9" value="3"> Component-level build vs. buy decisions made with clear reasoning and cost analysis</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dimension 4: Cost & ROI Modeling -->
+        <div class="scorecard-section" data-aos="fade-up">
+          <h3>4. Cost &amp; ROI Modeling</h3>
+
+          <div class="question-block" data-question="q10">
+            <p>Have you modeled the costs of running AI in production (tokens, compute, storage)?</p>
+            <div class="btn-group-toggle">
+              <label class="btn"><input type="radio" name="q10" value="0"> No cost modeling — we haven't thought beyond the API pricing page</label>
+              <label class="btn"><input type="radio" name="q10" value="1"> Back-of-napkin estimates but nothing tied to actual usage patterns</label>
+              <label class="btn"><input type="radio" name="q10" value="2"> Cost model exists for POC scale with some assumptions about growth</label>
+              <label class="btn"><input type="radio" name="q10" value="3"> Detailed cost model across POC, 10x, and 100x with per-unit economics</label>
+            </div>
+          </div>
+
+          <div class="question-block" data-question="q11">
+            <p>Do you have a clear picture of the ROI or business value AI would deliver?</p>
+            <div class="btn-group-toggle">
+              <label class="btn"><input type="radio" name="q11" value="0"> No — it's more of a "we should be doing AI" feeling</label>
+              <label class="btn"><input type="radio" name="q11" value="1"> General sense of value (e.g., "reduce churn") but no quantification</label>
+              <label class="btn"><input type="radio" name="q11" value="2"> Identified KPIs that AI would move, with rough target ranges</label>
+              <label class="btn"><input type="radio" name="q11" value="3"> Quantified business case with baseline metrics, targets, and payback timeline</label>
+            </div>
+          </div>
+
+          <div class="question-block" data-question="q12">
+            <p>Have you planned for cost guardrails and budget controls at scale?</p>
+            <div class="btn-group-toggle">
+              <label class="btn"><input type="radio" name="q12" value="0"> Haven't considered it</label>
+              <label class="btn"><input type="radio" name="q12" value="1"> Aware it's needed but no specific plan</label>
+              <label class="btn"><input type="radio" name="q12" value="2"> Basic budget caps or usage limits planned</label>
+              <label class="btn"><input type="radio" name="q12" value="3"> Token management, rate limiting, caching strategy, and cost alerting designed</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dimension 5: Team & Process Readiness -->
+        <div class="scorecard-section" data-aos="fade-up">
+          <h3>5. Team &amp; Process Readiness</h3>
+
+          <div class="question-block" data-question="q13">
+            <p>Does your team have experience with ML/AI or LLM-based systems?</p>
+            <div class="btn-group-toggle">
+              <label class="btn"><input type="radio" name="q13" value="0"> No AI/ML experience on the team</label>
+              <label class="btn"><input type="radio" name="q13" value="1"> Some engineers have experimented but no production AI experience</label>
+              <label class="btn"><input type="radio" name="q13" value="2"> One or two people with relevant experience; skills gap is identified</label>
+              <label class="btn"><input type="radio" name="q13" value="3"> Dedicated AI/ML capability or strong engineering team with production AI experience</label>
+            </div>
+          </div>
+
+          <div class="question-block" data-question="q14">
+            <p>Do you have executive sponsorship and cross-functional alignment for AI initiatives?</p>
+            <div class="btn-group-toggle">
+              <label class="btn"><input type="radio" name="q14" value="0"> AI is an engineering-only initiative with no exec sponsor</label>
+              <label class="btn"><input type="radio" name="q14" value="1"> Executive interest but no dedicated budget or mandate</label>
+              <label class="btn"><input type="radio" name="q14" value="2"> Exec sponsor in place with allocated budget and PM involvement</label>
+              <label class="btn"><input type="radio" name="q14" value="3"> Full C-suite alignment with product, engineering, and go-to-market coordination</label>
+            </div>
+          </div>
+
+          <div class="question-block" data-question="q15">
+            <p>How would you describe your team's approach to shipping new capabilities?</p>
+            <div class="btn-group-toggle">
+              <label class="btn"><input type="radio" name="q15" value="0"> Long release cycles, heavy process, change is slow</label>
+              <label class="btn"><input type="radio" name="q15" value="1"> Regular releases but limited experimentation culture</label>
+              <label class="btn"><input type="radio" name="q15" value="2"> Agile with feature flags, A/B testing, and iterative delivery</label>
+              <label class="btn"><input type="radio" name="q15" value="3"> Continuous delivery with rapid iteration, experimentation, and data-driven decisions</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4 mb-3" data-aos="fade-up">
+          <button id="submit-scorecard" class="btn btn-primary btn-lg">Get Your Score</button>
+          <p id="validation-msg" class="text-danger mt-2" style="display:none;">Please answer all 15 questions before submitting.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Results Section -->
+<div id="scorecard-results">
+  <div class="site-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="font-weight-bold mb-4">Your AI Readiness Score</h2>
+
+          <div id="score-circle" class="score-circle">
+            <div class="text-center">
+              <div class="score-value"><span id="score-number">0</span></div>
+              <div class="score-label">out of 100</div>
+            </div>
+          </div>
+
+          <span id="tier-badge" class="tier-badge"></span>
+
+          <div class="progress-bar-scorecard mt-3">
+            <div id="score-bar-fill" class="fill"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h3 class="font-weight-bold mb-4">Dimension Breakdown</h3>
+          <div id="dimension-breakdown"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div id="tier-recommendations" class="recommendation-box"></div>
+
+          <div class="text-center mt-5">
+            <h3 class="font-weight-bold mb-3">Want a Deeper Assessment?</h3>
+            <p class="mb-4">Our 2-week AI Readiness Assessment goes beyond self-evaluation. We audit your data, infrastructure, use cases, and costs to deliver a prioritized roadmap your team can execute.</p>
+            <a href="{{ '/contact.html' | relative_url }}" class="btn btn-primary btn-lg mr-2 mb-2">Book a Consultation</a>
+            <a href="{{ '/services/ai-readiness.html' | relative_url }}" class="btn btn-outline-primary btn-lg mb-2">Learn About the Assessment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function($) {
+  'use strict';
+
+  var dimensions = [
+    { name: 'Data Readiness', questions: ['q1', 'q2', 'q3'] },
+    { name: 'Infrastructure & Architecture', questions: ['q4', 'q5', 'q6'] },
+    { name: 'Use-Case Clarity', questions: ['q7', 'q8', 'q9'] },
+    { name: 'Cost & ROI Modeling', questions: ['q10', 'q11', 'q12'] },
+    { name: 'Team & Process Readiness', questions: ['q13', 'q14', 'q15'] }
+  ];
+
+  var tiers = [
+    {
+      name: 'Foundation Phase',
+      min: 0, max: 25,
+      cssClass: 'tier-foundation',
+      recommendations: {
+        title: 'Foundation Phase: Build the Basics First',
+        items: [
+          'Start with a data audit — catalog what you have, identify gaps, and establish quality baselines.',
+          'Invest in core infrastructure before AI: reliable pipelines, cloud-native deployment, basic observability.',
+          'Pick ONE high-impact, low-complexity use case and define success metrics before writing any AI code.',
+          'Assign an executive sponsor and build a cross-functional working group.',
+          'Consider a structured AI Readiness Assessment to accelerate your foundation-building.'
+        ]
+      }
+    },
+    {
+      name: 'Planning Phase',
+      min: 26, max: 50,
+      cssClass: 'tier-planning',
+      recommendations: {
+        title: 'Planning Phase: Close the Gaps, Then Build',
+        items: [
+          'Address your weakest dimension first — it will be the bottleneck regardless of how strong other areas are.',
+          'Build a detailed cost model covering POC, 10x, and 100x scenarios before committing to a technical approach.',
+          'Map the full user workflow for your top use case, including edge cases and fallback behaviors.',
+          'Evaluate build vs. buy at the component level, not as an all-or-nothing decision.',
+          'A 2-week Readiness Assessment can help you move from planning to a concrete, prioritized roadmap.'
+        ]
+      }
+    },
+    {
+      name: 'Ready to Build',
+      min: 51, max: 75,
+      cssClass: 'tier-ready',
+      recommendations: {
+        title: 'Ready to Build: Move to Execution',
+        items: [
+          'You have a solid foundation. Focus on de-risking your top use case with a time-boxed proof of concept.',
+          'Implement cost guardrails from day one — token budgets, caching, rate limiting.',
+          'Set up AI-specific observability: model latency, response quality metrics, cost-per-request tracking.',
+          'Plan for production from the start — avoid the "POC trap" where a demo never graduates to real users.',
+          'Consider bringing in a technical partner to accelerate your first production deployment.'
+        ]
+      }
+    },
+    {
+      name: 'Execution Ready',
+      min: 76, max: 100,
+      cssClass: 'tier-execution',
+      recommendations: {
+        title: 'Execution Ready: Scale with Confidence',
+        items: [
+          'Your organization is well-positioned for AI. Focus on speed to production and rapid iteration.',
+          'Build feedback loops early — collect user signals to improve model performance over time.',
+          'Expand your use-case backlog and establish a framework for prioritizing the next initiative.',
+          'Invest in AI platform capabilities (evaluation frameworks, prompt management, A/B testing) to accelerate future projects.',
+          'A technical review of your architecture can help ensure your first deployment scales cleanly to 10x and 100x.'
+        ]
+      }
+    }
+  ];
+
+  // Handle answer selection
+  $('.question-block .btn-group-toggle .btn').on('click', function() {
+    var $block = $(this).closest('.question-block');
+    $block.find('.btn').removeClass('active');
+    $(this).addClass('active');
+    $(this).find('input').prop('checked', true);
+    $block.removeClass('unanswered');
+  });
+
+  function getTier(score) {
+    for (var i = 0; i < tiers.length; i++) {
+      if (score >= tiers[i].min && score <= tiers[i].max) {
+        return tiers[i];
+      }
+    }
+    return tiers[0];
+  }
+
+  function getDimColor(pct) {
+    if (pct <= 25) return '#dc3545';
+    if (pct <= 50) return '#fd7e14';
+    if (pct <= 75) return '#2d5be3';
+    return '#28a745';
+  }
+
+  $('#submit-scorecard').on('click', function() {
+    var allAnswered = true;
+    var totalScore = 0;
+    var dimScores = [];
+
+    // Validate all questions answered
+    for (var i = 1; i <= 15; i++) {
+      var val = $('input[name="q' + i + '"]:checked').val();
+      if (val === undefined) {
+        allAnswered = false;
+        $('[data-question="q' + i + '"]').addClass('unanswered');
+      } else {
+        totalScore += parseInt(val);
+        $('[data-question="q' + i + '"]').removeClass('unanswered');
+      }
+    }
+
+    if (!allAnswered) {
+      $('#validation-msg').show();
+      // Scroll to first unanswered
+      var $first = $('.unanswered').first();
+      if ($first.length) {
+        $('html, body').animate({ scrollTop: $first.offset().top - 100 }, 400);
+      }
+      return;
+    }
+
+    $('#validation-msg').hide();
+
+    // Normalize to 0-100 (max raw = 45)
+    var normalized = Math.round((totalScore / 45) * 100);
+    var tier = getTier(normalized);
+
+    // Calculate dimension scores
+    dimensions.forEach(function(dim) {
+      var dimTotal = 0;
+      dim.questions.forEach(function(q) {
+        dimTotal += parseInt($('input[name="' + q + '"]:checked').val());
+      });
+      var dimPct = Math.round((dimTotal / 9) * 100);
+      dimScores.push({ name: dim.name, score: dimPct });
+    });
+
+    // Show results
+    $('#scorecard-results').show();
+
+    // Scroll to results
+    $('html, body').animate({ scrollTop: $('#scorecard-results').offset().top - 80 }, 600);
+
+    // Animate score number
+    $('#score-number').prop('number', 0).animateNumber({ number: normalized }, 1500);
+
+    // Score circle color
+    $('#score-circle').addClass(tier.cssClass);
+
+    // Tier badge
+    $('#tier-badge').text(tier.name).addClass(tier.cssClass);
+
+    // Progress bar
+    setTimeout(function() {
+      $('#score-bar-fill').addClass(tier.cssClass).css('width', normalized + '%');
+    }, 200);
+
+    // Dimension breakdown
+    var breakdownHtml = '';
+    dimScores.forEach(function(dim, idx) {
+      var color = getDimColor(dim.score);
+      breakdownHtml += '<div class="dimension-card" data-aos="fade-up" data-aos-delay="' + (idx * 100) + '">';
+      breakdownHtml += '<div class="d-flex justify-content-between align-items-center">';
+      breakdownHtml += '<h5 class="mb-0">' + dim.name + '</h5>';
+      breakdownHtml += '<strong>' + dim.score + '%</strong>';
+      breakdownHtml += '</div>';
+      breakdownHtml += '<div class="dim-bar"><div class="dim-fill" data-width="' + dim.score + '" style="background:' + color + ';"></div></div>';
+      breakdownHtml += '</div>';
+    });
+    $('#dimension-breakdown').html(breakdownHtml);
+
+    // Animate dimension bars
+    setTimeout(function() {
+      $('.dim-fill').each(function() {
+        $(this).css('width', $(this).data('width') + '%');
+      });
+    }, 400);
+
+    // Recommendations
+    var recHtml = '<h4>' + tier.recommendations.title + '</h4><ul>';
+    tier.recommendations.items.forEach(function(item) {
+      recHtml += '<li>' + item + '</li>';
+    });
+    recHtml += '</ul>';
+    $('#tier-recommendations').html(recHtml);
+
+    // Reinitialize AOS for new elements
+    if (typeof AOS !== 'undefined') {
+      AOS.refresh();
+    }
+  });
+
+})(jQuery);
+</script>
