@@ -929,6 +929,7 @@ h1, h2, h3, h4, h5,
   background-repeat: no-repeat;
   background-position: top;
   background-position: center center;
+  padding-top: 100px;
 }
 .site-section-cover,
 .site-section-cover .container {
@@ -937,18 +938,18 @@ h1, h2, h3, h4, h5,
 }
 .site-section-cover,
 .site-section-cover .container > .row {
-  min-height: 450px;
+  min-height: 225px;
 }
 @media (max-width: 991.98px) {
   .site-section-cover,
   .site-section-cover .container > .row {
-    height: calc(70vh - 196px);
-    min-height: 600px;
+    height: auto;
+    min-height: 300px;
   }
 }
 .site-section-cover.full-screen, .site-section-cover.full-screen .container > .row {
-  height: 100vh;
-  min-height: 755px;
+  height: 50vh;
+  min-height: 375px;
 }
 .site-section-cover.overlay {
   position: relative;
@@ -974,14 +975,14 @@ h1, h2, h3, h4, h5,
   background-repeat: no-repeat;
 }
 .site-section-cover h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   line-height: 1.3;
   font-family: "Poppins", sans-serif;
   font-weight: 900 !important;
 }
 @media (max-width: 991.98px) {
   .site-section-cover h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 .site-section-cover p {

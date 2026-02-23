@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The AI Readiness Checklist: What B2B SaaS Companies Actually Need Before Building AI Features"
-date: 2026-02-20
+date: 2026-03-10
 description: "A practical AI readiness assessment framework for B2B SaaS companies covering data quality, infrastructure, use-case prioritization, cost modeling, and team preparedness."
 keywords: "AI readiness assessment, B2B SaaS AI, AI readiness checklist, AI implementation, AI cost modeling, AI infrastructure"
 image: /images/robot.jpg
