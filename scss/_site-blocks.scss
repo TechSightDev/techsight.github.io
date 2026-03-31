@@ -427,6 +427,23 @@
   }
 }
 
+.post-featured-image {
+  display: block;
+  max-width: 50%;
+  margin: 0 auto 2rem;
+}
+
+.post-content {
+  font-size: 1.3rem;
+  line-height: 1.85;
+  color: #3d4250;
+  font-weight: 400;
+
+  p, li {
+    font-size: 1.3rem;
+  }
+}
+
 .post-meta {
   font-size: 13px;
   text-transform: uppercase;

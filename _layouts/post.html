@@ -14,12 +14,14 @@ layout: default
 
 <div class="site-section pt-0">
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="col-lg-8">
         {% if page.image %}
-        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="img-fluid mb-5">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="img-fluid mb-5 post-featured-image">
         {% endif %}
-        {{ content }}
+        <div class="post-content">
+          {{ content }}
+        </div>
       </div>
     </div>
   </div>

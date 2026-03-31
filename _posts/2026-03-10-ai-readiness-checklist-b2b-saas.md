@@ -7,13 +7,13 @@ keywords: "AI readiness assessment, B2B SaaS AI, AI readiness checklist, AI impl
 image: /images/robot.jpg
 ---
 
-Every B2B SaaS company has "AI" on the roadmap. Most will spend six figures learning what they should have assessed in two weeks. This checklist is the assessment framework we use at TechSight to evaluate whether an organization is actually ready to build AI features — and where to start when they are.
+Every B2B SaaS company has "AI" on the roadmap. Most will spend six figures learning what they should have assessed in two weeks. This checklist is the assessment framework we use at TechSight to evaluate whether an organization is actually ready to build AI features - and where to start when they are.
 
 ## Why AI Projects Stall (and What to Do About It)
 
-The pattern is predictable. A team gets excited about a use case — maybe an AI-powered search feature or an intelligent recommendation engine. They spin up a proof of concept. The demo looks great. Then reality hits: the data isn't clean enough, the infrastructure can't support real-time inference at scale, and nobody modeled what it would cost to serve 10,000 users instead of 10.
+The pattern is predictable. A team gets excited about a use case - maybe an AI-powered search feature or an intelligent recommendation engine. They spin up a proof of concept. The demo looks great. Then reality hits: the data isn't clean enough, the infrastructure can't support real-time inference at scale, and nobody modeled what it would cost to serve 10,000 users instead of 10.
 
-The POC joins what we call the "POC graveyard" — a collection of impressive demos that never reached production.
+The POC joins what we call the "POC graveyard" - a collection of impressive demos that never reached production.
 
 The fix isn't more ambition. It's more preparation. The companies that ship AI features successfully do the unglamorous work first: auditing data, stress-testing infrastructure, modeling costs, and aligning their teams. That's what this checklist covers.
 
@@ -23,7 +23,7 @@ Data readiness isn't about having "big data." It's about having the *right* data
 
 **Pipeline reliability.** Can you get fresh data from your source systems to your AI application without manual intervention? If your ETL jobs fail silently or require a developer to restart them, you're not ready for production AI. AI systems are only as reliable as the data feeding them.
 
-**Data quality.** Duplicates, missing fields, inconsistent formats — these problems don't just degrade model performance, they make results unpredictable. Before you fine-tune a model or build a RAG pipeline, establish quality baselines for the data you plan to use. Quantify completeness, consistency, and freshness.
+**Data quality.** Duplicates, missing fields, inconsistent formats - these problems don't just degrade model performance, they make results unpredictable. Before you fine-tune a model or build a RAG pipeline, establish quality baselines for the data you plan to use. Quantify completeness, consistency, and freshness.
 
 **Data volume and relevance.** You don't need millions of records. You need enough relevant, representative data for your specific use case. A customer support chatbot needs a comprehensive knowledge base. A recommendation engine needs behavioral data with sufficient coverage. Audit what you have against what your use case demands.
 
@@ -36,11 +36,11 @@ Data readiness isn't about having "big data." It's about having the *right* data
 
 AI features place specific demands on your infrastructure that traditional SaaS features don't. LLM calls introduce latency. Embedding generation requires compute. Vector databases need dedicated storage. If your architecture can't accommodate these, your AI feature will either be slow, expensive, or fragile.
 
-**Cloud maturity.** AI workloads benefit enormously from cloud-native patterns — auto-scaling, containerized deployments, infrastructure as code. If you're still doing manual deployments or running on-prem, the infrastructure buildout will add months to your timeline.
+**Cloud maturity.** AI workloads benefit enormously from cloud-native patterns - auto-scaling, containerized deployments, infrastructure as code. If you're still doing manual deployments or running on-prem, the infrastructure buildout will add months to your timeline.
 
 **Architectural flexibility.** Can your application integrate external API calls (to an LLM provider, for example) without a major refactor? Service-oriented or microservice architectures make this straightforward. Tightly coupled monoliths make it painful.
 
-**Observability.** AI systems fail in subtle ways — not with crashes, but with degraded quality. You need monitoring that goes beyond uptime checks. Think: response latency percentiles, token usage tracking, and output quality metrics. If you can't measure it, you can't maintain it.
+**Observability.** AI systems fail in subtle ways - not with crashes, but with degraded quality. You need monitoring that goes beyond uptime checks. Think: response latency percentiles, token usage tracking, and output quality metrics. If you can't measure it, you can't maintain it.
 
 **What to check:**
 - Do you have cloud-native deployment with CI/CD and some form of IaC?
@@ -49,7 +49,7 @@ AI features place specific demands on your infrastructure that traditional SaaS 
 
 ## 3. Use-Case Prioritization: Pick the Right First Bet
 
-The biggest mistake teams make isn't choosing the wrong technology — it's choosing the wrong use case. The right first AI project has three characteristics: clear user value, technical feasibility with your current stack, and data that's already accessible.
+The biggest mistake teams make isn't choosing the wrong technology - it's choosing the wrong use case. The right first AI project has three characteristics: clear user value, technical feasibility with your current stack, and data that's already accessible.
 
 **Specificity over ambition.** "Add AI to the product" is not a use case. "Auto-generate summary reports from customer interaction data" is. The more specific you are, the easier it is to scope, build, and measure.
 
@@ -81,9 +81,9 @@ This is where most AI initiatives go off the rails. A POC costs a few hundred do
 
 Technology doesn't ship itself. Your team's experience, your organization's alignment, and your development culture all determine whether an AI project succeeds or stalls.
 
-**Skills and experience.** You don't need a team of ML PhDs. But you do need engineers who understand LLM integration patterns, prompt engineering, and the operational characteristics of AI systems. If that experience doesn't exist internally, plan for it — through hiring, upskilling, or a technical partner.
+**Skills and experience.** You don't need a team of ML PhDs. But you do need engineers who understand LLM integration patterns, prompt engineering, and the operational characteristics of AI systems. If that experience doesn't exist internally, plan for it - through hiring, upskilling, or a technical partner.
 
-**Executive sponsorship.** AI projects that live exclusively in engineering rarely survive contact with budget reviews. You need an executive sponsor who understands the investment, has allocated budget, and can champion the initiative cross-functionally. Product and go-to-market alignment matters too — building a feature nobody sells is a waste.
+**Executive sponsorship.** AI projects that live exclusively in engineering rarely survive contact with budget reviews. You need an executive sponsor who understands the investment, has allocated budget, and can champion the initiative cross-functionally. Product and go-to-market alignment matters too - building a feature nobody sells is a waste.
 
 **Shipping culture.** AI features benefit from rapid iteration. You'll ship a first version, collect feedback, and improve. Teams that are comfortable with feature flags, A/B testing, and iterative delivery will move faster than teams with quarterly release cycles.
 
@@ -94,9 +94,9 @@ Technology doesn't ship itself. Your team's experience, your organization's alig
 
 ## From Assessment to Action
 
-If you scored yourself honestly across these five dimensions, you likely have a clear picture of where you're strong and where the gaps are. That's the point. The companies that succeed with AI aren't the ones with the most sophisticated technology — they're the ones that understand their starting point and build from there.
+If you scored yourself honestly across these five dimensions, you likely have a clear picture of where you're strong and where the gaps are. That's the point. The companies that succeed with AI aren't the ones with the most sophisticated technology - they're the ones that understand their starting point and build from there.
 
-**Want to quantify where you stand?** Take our free [AI Readiness Scorecard](/scorecard.html) — a 3-minute self-assessment that scores your organization across all five dimensions and provides personalized recommendations.
+**Want to quantify where you stand?** Take our free [AI Readiness Scorecard](/scorecard.html) - a 3-minute self-assessment that scores your organization across all five dimensions and provides personalized recommendations.
 
 **Want a deeper, expert-led assessment?** Our [2-week AI Readiness Assessment](/services/ai-readiness.html) goes beyond self-evaluation. We audit your data, infrastructure, use cases, and costs to deliver a prioritized roadmap your team can execute with confidence.
 
