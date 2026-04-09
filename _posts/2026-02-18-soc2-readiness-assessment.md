@@ -2,7 +2,7 @@
 layout: post
 title: "Achieve SOC 2 Readiness with a Technical Gap Analysis"
 date: 2026-02-18
-image: /images/post_3.jpg
+image: /images/blog/soc2-readiness-assessment.jpg
 ---
 
 **SOC 2 readiness in 2–3 weeks. Technical gap analysis, risk register, and an implementation roadmap-not another deck.**

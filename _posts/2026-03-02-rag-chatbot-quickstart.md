@@ -2,7 +2,7 @@
 layout: post
 title: "Chat With Your Data in 2 Weeks"
 date: 2026-03-02
-image: /images/post_2.jpg
+image: /images/blog/rag-chatbot-quickstart.jpg
 ---
 
 **What if your team could just ask questions and get answers-from your own docs, wikis, and knowledge base?**

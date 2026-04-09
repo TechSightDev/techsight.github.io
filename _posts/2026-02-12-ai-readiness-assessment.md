@@ -2,7 +2,7 @@
 layout: post
 title: "Are You Ready for AI? Technical Due Diligence for Your Roadmap"
 date: 2026-02-12
-image: /images/robot.jpg
+image: /images/blog/ai-readiness-assessment.jpg
 ---
 
 **Technical due diligence for AI. Know if you’re ready to build-and where to start.**

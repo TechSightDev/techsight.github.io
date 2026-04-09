@@ -4,7 +4,7 @@ title: "The AI Readiness Checklist: What B2B SaaS Companies Actually Need Before
 date: 2026-03-10
 description: "A practical AI readiness assessment framework for B2B SaaS companies covering data quality, infrastructure, use-case prioritization, cost modeling, and team preparedness."
 keywords: "AI readiness assessment, B2B SaaS AI, AI readiness checklist, AI implementation, AI cost modeling, AI infrastructure"
-image: /images/robot.jpg
+image: /images/blog/ai-readiness-checklist.jpg
 ---
 
 Every B2B SaaS company has "AI" on the roadmap. Most will spend six figures learning what they should have assessed in two weeks. This checklist is the assessment framework we use at TechSight to evaluate whether an organization is actually ready to build AI features - and where to start when they are.
