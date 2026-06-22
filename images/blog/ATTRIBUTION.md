@@ -11,5 +11,6 @@ When you publish, credit photographers where practical (for example caption or s
 | `ai-readiness-checklist.jpg` | [Scott Graham](https://unsplash.com/@amstram) | [Person holding pencil near laptop computer](https://unsplash.com/photos/5fNmWej4tAA) |
 | `rag-chatbot-quickstart.jpg` | [Kevin Ku](https://unsplash.com/@ikukevk) | [Closeup photo of eyeglasses](https://unsplash.com/photos/w7ZyuGYNpRQ) |
 | `enterprise-readiness-sprint.jpg` | [Alex Kotliarskyi](https://unsplash.com/@frantic) | [People doing office works](https://unsplash.com/photos/QBpZGqEMsKg) |
+| `aws-cost-optimization-assessment.jpg` | [Growtika](https://unsplash.com/@growtika) | [AWS logo on gray background](https://unsplash.com/photos/nGoCBxiaRO0) |
 
 Each blog post in `_posts/` references **one** of these files; no two posts share the same hero image.
