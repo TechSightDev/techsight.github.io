@@ -15,6 +15,7 @@ Single file for drafting, scheduling, and tracking LinkedIn posts for TechSight 
 | Date       | Title                                              | Status    | Topic                    |
 |------------|----------------------------------------------------|-----------|--------------------------|
 | 2026-07-27 | Skin in the Game: Diligence With Aligned Incentives| draft     | M&A / Partnership        |
+| 2026-07-24 | The Line Item Every Roll-Up Underwrites            | draft     | M&A / Roll-Up            |
 | 2026-07-22 | The Free Red-Flag Screen                           | draft     | M&A / Offer              |
 | 2026-07-20 | Who Actually Reads the Code?                       | draft     | M&A / Due Diligence      |
 | 2026-06-22 | AWS Cost Optimization Assessment                   | draft     | FinOps / AWS             |
@@ -66,6 +67,34 @@ If you're running deals in software or tech-enabled services and want a technica
 https://techsight.dev
 
 #MergersAndAcquisitions #SearchFund #PrivateEquity #TechnicalDueDiligence #IndependentSponsor
+
+---
+
+## 2026-07-24 — The Line Item Every Roll-Up Underwrites
+
+**Status:** draft · **Topic:** M&A / Roll-Up
+
+Every roll-up thesis has it: acquire five companies, consolidate operations, capture the margin.
+
+Then reality arrives.
+
+Company one runs on a homegrown spreadsheet system nobody documented. Company two's field team lives in a point tool the vendor stopped supporting. Company three reconciles everything by hand into QuickBooks at month-end. Company four's compliance docs are scattered across three inboxes and a filing cabinet.
+
+"Consolidate the back office" was a line in the deck. Executing it is a systems integration project nobody budgeted for — and it's exactly where roll-up synergies quietly die.
+
+I've watched this play out the same way twice this year: the sponsor's model assumed a consolidated reporting view by month six. By month six, someone's operating partner is manually merging five spreadsheets for the board pack, and the "20% margin from shared services" thesis is on hold.
+
+The fix isn't another SaaS product every acquired company has to adapt to — that's five change-management fights at once, right when you can least afford the disruption. It's one operational platform, configured to how each business actually works, extended per acquisition, live in weeks instead of the year a custom build usually takes.
+
+Jobs, scheduling, field data, compliance, invoicing — one system, one report, one place an auditor or a future buyer can see the whole operation.
+
+If your value-creation plan includes operational consolidation and nobody currently owns the systems side of it, that's the gap we fill — built, hosted, and operated through the hold, not handed off after go-live like an agency would.
+
+Running a roll-up with this problem? Happy to talk through what it looks like for your portfolio.
+
+https://techsight.dev
+
+#PrivateEquity #RollUp #MergersAndAcquisitions #OperationalExcellence #ValueCreation #IndependentSponsor
 
 ---
 
