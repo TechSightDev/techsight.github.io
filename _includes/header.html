@@ -11,8 +11,9 @@
         <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation">
           <ul class="site-menu main-menu js-clone-nav ml-auto ">
             <li class="{% if page.url == '/' %}active{% endif %}"><a href="{{ '/' | relative_url }}" class="nav-link">Home</a></li>
+            <li class="{% if page.url contains '/free-screen' %}active{% endif %}"><a href="{{ '/free-screen.html' | relative_url }}" class="nav-link">Free Screen</a></li>
             <li class="{% if page.url contains '/about' %}active{% endif %}"><a href="{{ '/about.html' | relative_url }}" class="nav-link">About</a></li>
-            <li class="{% if page.url contains '/services' %}active{% endif %}"><a href="{{ '/services.html' | relative_url }}" class="nav-link">Services</a></li>
+            <li class="{% if page.url contains '/services' %}active{% endif %}"><a href="{{ '/services.html' | relative_url }}" class="nav-link">How It Works</a></li>
             <li class="{% if page.url contains '/blog' %}active{% endif %}"><a href="{{ '/blog.html' | relative_url }}" class="nav-link">Blog</a></li>
             <li class="{% if page.url contains '/contact' %}active{% endif %}"><a href="{{ '/contact.html' | relative_url }}" class="nav-link">Contact</a></li>
           </ul>
