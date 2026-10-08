@@ -1,7 +1,7 @@
 title: TechSight
 email: info@techsight.dev
 description: >- # this means to ignore newlines until "baseurl:"
-  TechSight is the technical due diligence partner for M&A — serving private equity firms, family offices, search funds, and M&A advisors on software deals. Buy-side diligence, sell-side exit readiness, and post-close value creation. We read the code behind the deal.
+  Technical red-flag screens for people buying small B2B SaaS ($250K–$5M ARR), pre-LOI. First screen free per firm; 2-page memo in 3 business days; document-based only. Fixed-fee small-SaaS diligence and post-close fractional CTO.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://techsight.dev" # the base hostname & protocol for your site
 
