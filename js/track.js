@@ -107,8 +107,14 @@
     'calendly.event_scheduled': 'calendly_event_scheduled'
   };
 
+  // Calendly can post the same lifecycle event more than once (observed: event_type_viewed
+  // fires twice per popup open), so count each stage once per page load.
+  var calendlySeen = {};
+
   function onMessage(e) {
     if (e.origin !== 'https://calendly.com' || !e.data || !CALENDLY_EVENTS[e.data.event]) return;
+    if (calendlySeen[e.data.event]) return;
+    calendlySeen[e.data.event] = true;
     var params = { page_path: location.pathname };
     var touch = readFirstTouch();
     if (touch) {
