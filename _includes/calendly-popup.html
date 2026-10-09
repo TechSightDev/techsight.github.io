@@ -1,0 +1,12 @@
+<!-- Opens links marked data-calendly-popup in a Calendly overlay so visitors book without leaving the page.
+     Without JS (or before widget.js loads) the link still goes straight to Calendly. -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('a[data-calendly-popup]');
+    if (!el || !window.Calendly) return;
+    e.preventDefault();
+    Calendly.initPopupWidget({ url: el.href });
+  });
+</script>

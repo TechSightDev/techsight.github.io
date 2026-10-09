@@ -1,20 +1,23 @@
 <div class="footer site-section pb-0 bg-primary">
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-4">
         <div class="site-logo-footer">
           <a href="{{ '/' | relative_url }}" class="text-white">TechSight</a>
         </div>
+        <p class="text-white-50 mt-3">Technical red-flag screens for buyers of small B2B SaaS.</p>
       </div>
-      <div class="col-md-8 ml-auto">
-        <div class="row">
-          <div class="col-md-8 ml-auto">
-            <h3 class="footer-heading mb-4 text-uppercase">Contact Info</h3>
-            <ul class="list-unstyled links">
-              <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            </ul>
-          </div>
-        </div>
+      <div class="col-md-4">
+        <h3 class="footer-heading mb-4 text-uppercase">Contact</h3>
+        <ul class="list-unstyled links">
+          <li class="text-white-50">{{ site.founder_name }}, founder</li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          {% if site.linkedin_url != "" %}<li><a href="{{ site.linkedin_url }}" target="_blank" rel="noopener">LinkedIn</a></li>{% endif %}
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h3 class="footer-heading mb-4 text-uppercase">Brokers</h3>
+        <p class="text-white-50">If a buyer has open questions about the tech, send them my way. Their first screen is free.</p>
       </div>
     </div>
   </div>

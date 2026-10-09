@@ -1,4 +1,5 @@
 ---
+hidden: true # predates the small-SaaS buyer focus; URL kept, unlisted and noindexed
 layout: post
 title: "From Vibe Code to Production: Our 2-Day Enterprise Readiness Sprint"
 date: 2026-04-10

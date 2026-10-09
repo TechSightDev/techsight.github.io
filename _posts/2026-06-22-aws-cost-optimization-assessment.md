@@ -1,4 +1,5 @@
 ---
+hidden: true # predates the small-SaaS buyer focus; URL kept, unlisted and noindexed
 layout: post
 title: "Free AWS Cost Optimization Assessment: You Only Pay a Share of Savings"
 date: 2026-06-22
