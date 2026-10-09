@@ -7,14 +7,16 @@
         </div>
       </div>
       <div class="col-9 text-right">
-        <span class="d-inline-block d-lg-block"><a href="#" class="text-black site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-black"></span></a></span>
+        {% unless page.url contains '/free-screen' %}<a href="{{ '/free-screen.html' | relative_url }}" class="btn btn-cta header-cta d-none d-md-inline-block" data-track="free_screen" data-track-location="header">Free screen</a>{% endunless %}
+        <span class="d-inline-block"><a href="#" class="text-black site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-black"></span></a></span>
         <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation">
           <ul class="site-menu main-menu js-clone-nav ml-auto ">
             <li class="{% if page.url == '/' %}active{% endif %}"><a href="{{ '/' | relative_url }}" class="nav-link">Home</a></li>
             <li class="{% if page.url contains '/free-screen' %}active{% endif %}"><a href="{{ '/free-screen.html' | relative_url }}" class="nav-link">Free Screen</a></li>
-            <li class="{% if page.url contains '/about' %}active{% endif %}"><a href="{{ '/about.html' | relative_url }}" class="nav-link">About</a></li>
             <li class="{% if page.url contains '/services' %}active{% endif %}"><a href="{{ '/services.html' | relative_url }}" class="nav-link">How It Works</a></li>
-            <li class="{% if page.url contains '/blog' %}active{% endif %}"><a href="{{ '/blog.html' | relative_url }}" class="nav-link">Blog</a></li>
+            <li class="{% if page.url contains '/about' %}active{% endif %}"><a href="{{ '/about.html' | relative_url }}" class="nav-link">About</a></li>
+            {% assign visible_posts = site.posts | where_exp: "p", "p.hidden != true" %}
+            {% if visible_posts.size > 0 %}<li class="{% if page.url contains '/blog' %}active{% endif %}"><a href="{{ '/blog.html' | relative_url }}" class="nav-link">Notes</a></li>{% endif %}
             <li class="{% if page.url contains '/contact' %}active{% endif %}"><a href="{{ '/contact.html' | relative_url }}" class="nav-link">Contact</a></li>
           </ul>
         </nav>

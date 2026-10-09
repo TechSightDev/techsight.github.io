@@ -1,13 +1,16 @@
 title: TechSight
 email: info@techsight.dev
 description: >- # this means to ignore newlines until "baseurl:"
-  Technical red-flag screens for people buying small B2B SaaS ($250K–$5M ARR), pre-LOI. First screen free per firm; 2-page memo in 3 business days; document-based only. Fixed-fee small-SaaS diligence and post-close fractional CTO.
+  Technical red-flag screens for buyers of $250K–$5M ARR B2B SaaS, pre-LOI, from a CTO who buys these companies too. First screen free: a 2-page memo within 3 business days.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://techsight.dev" # the base hostname & protocol for your site
 
 # Build settings
 # theme: minima # You can change this later or remove it if using custom styles
 google_analytics: "G-96RVE8KG4D" # Replace with your Google Analytics Measurement ID
+calendly_url: "https://calendly.com/joe-techsight/30min"
+founder_name: "Joe Conley"
+linkedin_url: "" # Joe's LinkedIn profile URL; LinkedIn links render only once this is set
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
