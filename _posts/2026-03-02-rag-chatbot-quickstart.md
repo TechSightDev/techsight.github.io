@@ -1,4 +1,5 @@
 ---
+hidden: true # predates the small-SaaS buyer focus; URL kept, unlisted and noindexed
 layout: post
 title: "Chat With Your Data in 2 Weeks"
 date: 2026-03-02

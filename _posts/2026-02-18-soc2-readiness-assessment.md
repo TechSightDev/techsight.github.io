@@ -1,4 +1,5 @@
 ---
+hidden: true # predates the small-SaaS buyer focus; URL kept, unlisted and noindexed
 layout: post
 title: "Achieve SOC 2 Readiness with a Technical Gap Analysis"
 date: 2026-02-18

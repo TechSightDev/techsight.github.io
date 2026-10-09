@@ -1,4 +1,5 @@
 ---
+hidden: true # predates the small-SaaS buyer focus; URL kept, unlisted and noindexed
 layout: post
 title: "The AI Readiness Checklist: What B2B SaaS Companies Actually Need Before Building AI Features"
 date: 2026-03-10

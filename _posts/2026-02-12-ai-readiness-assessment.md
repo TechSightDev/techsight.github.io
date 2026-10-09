@@ -1,4 +1,5 @@
 ---
+hidden: true # predates the small-SaaS buyer focus; URL kept, unlisted and noindexed
 layout: post
 title: "Are You Ready for AI? Technical Due Diligence for Your Roadmap"
 date: 2026-02-12
