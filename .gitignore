@@ -1,3 +1,8 @@
 _site/
 .jekyll-cache/
 .sass-cache/
+
+# Local PR-review scratch (overseer / agent review files)
+.reviews/
+.reviews-wt/
+.reviews-tmp/
