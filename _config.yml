@@ -16,6 +16,9 @@ exclude:
   - .idea
   - CNAME
   - README.md
+  - AGENTS.md
+  - CLAUDE.md
+  - GEMINI.md
   - archived
   - prepros-6.config
   - content
